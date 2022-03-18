@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: 'Formular';
+        font-weight: 200;
+        src: url('/public/fonts/Formular-Light.woff2') format('woff2'), url('/public/fonts/Formular-Light.woff') format('woff');
+    }
+    @font-face {
+        font-family: 'Formular';
+        font-weight: 400;
+        src: url('/public/fonts/Formular-Medium.woff2') format('woff2'), url('/public/fonts/Formular-Medium.woff') format('woff');
+    }
+    @font-face {
+        font-family: 'Formular';
+        src: url('/public/fonts/Formular.woff2') format('woff2'), url('/public/fonts/Formular.woff') format('woff');
+    }
+}
