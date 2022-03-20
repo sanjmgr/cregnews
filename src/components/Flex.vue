@@ -109,6 +109,11 @@
                             </div>
                             <!-- main section -->
                             <article class="mt-4 mb-3">
+                                <img
+                                    class="aspect-image my-4 h-auto rounded-2xl md:hidden"
+                                    src="https://cdn.pixabay.com/photo/2020/01/23/16/42/embrace-4788167_960_720.jpg"
+                                    alt=""
+                                />
                                 <h2 class="object-cover text-2xl font-bold">
                                     Russia space chief angry over US scrubbing of Gagarin
                                 </h2>
@@ -197,9 +202,9 @@
                                 <div
                                     class="grid h-8 w-8 place-content-center rounded-full bg-[#E6E9ED] text-lg"
                                 >
-                                    F
+                                    B
                                 </div>
-                                <div class="text-lg">France-Presse</div>
+                                <div class="text-lg">BBC News</div>
                                 <div
                                     class="grid place-content-center rounded-2xl px-2 text-sm ring-1 ring-[#848584]"
                                 >
@@ -208,6 +213,11 @@
                             </div>
                             <!-- main section -->
                             <article class="mt-4 mb-3">
+                                <img
+                                    class="aspect-image my-4 h-auto rounded-2xl md:hidden"
+                                    src="https://cdn.pixabay.com/photo/2020/01/23/16/42/embrace-4788167_960_720.jpg"
+                                    alt=""
+                                />
                                 <h2 class="object-cover text-2xl font-bold">
                                     Surigae Tropical Cyclone formed around West Pacific, north of
                                     Papua
