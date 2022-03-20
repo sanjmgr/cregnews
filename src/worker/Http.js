@@ -4,7 +4,8 @@ const HTTP = axios.create({
     baseURL: `https://newsapi.org/v2/`,
     headers: {
         Authorization: 'Bearer 8cd9d8bbae394be5b04b953c45f57454',
-        'content-type': 'application/x-www-form-urlencoded',
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'application/json',
     },
 })
 
