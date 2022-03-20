@@ -286,3 +286,128 @@ export const articles = [
             'Kanye “Ye” West’s rep says that an unannounced performance at the 2022 Grammy Awards has been pulled due to “concerning online behavior.”\r\nA representative for the rapper confirmed to The Hollywood R… [+2915 chars]',
     },
 ]
+
+export const headlines = [
+    {
+        source: {
+            id: null,
+            name: 'Xiaomiadictos.com',
+        },
+        author: 'Johnny Carrizalez Higuera',
+        title: 'Así puedes añadir esta animación de carga a tu Xiaomi - XiaomiAdictos',
+        description:
+            'En la app Temas de MIUI se encuentra Hello White V12, un tema muy llamativo que te permite cambiar la animación de carga de tu Xiaomi.',
+        url: 'https://www.xiaomiadictos.com/asi-puedes-anadir-esta-animacion-de-carga-a-tu-xiaomi/',
+        urlToImage:
+            'https://www.xiaomiadictos.com/wp-content/uploads/2022/03/animacion-carga-xiaomi.jpg',
+        publishedAt: '2022-03-20T11:23:40Z',
+        content:
+            'MIUI cuenta con animaciones y temas predeterminados bastante llamativos. Sin embargo, la comunidad suele diseñar sus propios paquetes de personalización para darle un toque distintivo a los terminale… [+1469 chars]',
+    },
+    {
+        source: {
+            id: null,
+            name: 'Sportskeeda',
+        },
+        author: 'Jason Wright',
+        title: 'How to get the Old House key in TUNIC - Sportskeeda',
+        description:
+            'There are numerous locations players will travel to during their adventures in TUNIC.',
+        url: 'https://www.sportskeeda.com/esports/how-get-old-house-key-tunic',
+        urlToImage: 'https://staticg.sportskeeda.com/editor/2022/03/cb189-16477402699090-1920.jpg',
+        publishedAt: '2022-03-20T11:18:59Z',
+        content:
+            'There are numerous locations players will travel to during their adventures in TUNIC. As they guide the adorable fox through their perilous journey, they will need to find different items to help the… [+2511 chars]',
+    },
+    {
+        source: {
+            id: null,
+            name: 'Editalconcursosbrasil.com.br',
+        },
+        author: 'Gabriela Stahler',
+        title: 'Descubra agora como ver stories do Instagram sem que a pessoa saiba - Edital Concursos Brasil',
+        description:
+            'Aprenda a stalkear um contato no Instagram sem que ele saiba disso. Você vai aprender agora como ver um story do Instagram sem que a pessoa saiba que você está fazendo isso.',
+        url: 'https://editalconcursosbrasil.com.br/noticias/2022/03/descubra-agora-como-ver-stories-do-instagram-sem-que-a-pessoa-saiba/',
+        urlToImage: 'https://editalconcursosbrasil.com.br/wp-content/uploads/2022/02/instagram.jpg',
+        publishedAt: '2022-03-20T11:01:00Z',
+        content:
+            'O ser humano tem o instinto natural de curiosidade sobre a vida de outras pessoas. Afinal, não é à toa que as redes sociais fazem tanto sucesso desde que as primeiras foram criadas. Contudo, o ideal … [+1785 chars]',
+    },
+    {
+        source: {
+            id: null,
+            name: 'Forbes',
+        },
+        author: 'Paul Tassi',
+        title: '‘Fortnite’ Season 2 Is A Badly Timed War Theme, But Epic Is Donating All Proceeds To Ukraine - Forbes',
+        description:
+            'Fortnite kept chapter 3, season 2 a secret because it was based around a war/resistance concept that is incredibly badly timed. But Epic is donating all initial proceeds from it to Ukraine.',
+        url: 'https://www.forbes.com/sites/paultassi/2022/03/20/fortnite-season-2-is-a-badly-timed-war-theme-but-epic-is-donating-all-proceeds-to-ukraine/',
+        urlToImage:
+            'https://imageio.forbes.com/specials-images/imageserve/6237069d22322224190c5b37/0x0.jpg?format=jpg&crop=1448,814,x38,y0,safe&fit=crop',
+        publishedAt: '2022-03-20T10:53:27Z',
+        content:
+            'Fortnite\r\nEpic\r\nOh wow, this is easily one of the most uncomfortable situations Ive seen in gaming, but Fortnite is doing its best to walk a tightrope, and may end up doing a lot of good in the proce… [+2858 chars]',
+    },
+    {
+        source: {
+            id: null,
+            name: 'NME',
+        },
+        author: null,
+        title: "'New World' shares 2022 roadmap, will add 3v3 arena in spring - NME",
+        description:
+            "Amazon has released a developers roundtable, which briefly explores what to expect from 'New World' this year - check it out here",
+        url: 'https://www.nme.com/news/gaming-news/new-world-shares-2022-roadmap-will-add-3v3-arena-in-spring-3186004',
+        urlToImage:
+            'https://www.nme.com/wp-content/uploads/2021/11/New-World-cold-sellers-update.jpg',
+        publishedAt: '2022-03-20T10:47:05Z',
+        content:
+            'Amazon Game Studios has released a developers roundtable, which briefly explores what to expect from New World this year – check it out below.\r\nThe hour-long video spends a chunk of time covering Mar… [+2336 chars]',
+    },
+    {
+        source: {
+            id: null,
+            name: "Tom's Guide",
+        },
+        author: 'Louis Ramirez',
+        title: "Hurry! New iPad Air 2022 is already on sale at Amazon - Tom's Guide",
+        description: "This is the first dollar-off discount we've seen",
+        url: 'https://www.tomsguide.com/deals/hurry-new-ipad-air-2022-is-already-on-sale-at-amazon',
+        urlToImage: 'https://cdn.mos.cms.futurecdn.net/ZXTAfdmSpKL2M7QWsZbvYT-1200-80.jpg',
+        publishedAt: '2022-03-20T10:11:25Z',
+        content:
+            "The new iPad Air 2022 just received its first price cut courtesy of Amazon. \r\nFor a limited time, you can grab the new iPad Air (64GB/2022) on sale for $569 at Amazon. That's $30 off and the first do… [+990 chars]",
+    },
+    {
+        source: {
+            id: null,
+            name: 'jeuxvideo.com',
+        },
+        author: 'Warial',
+        title: 'TV OLED : ce qui va vraiment changer en 2022 pour LG (prix, performances...) - jeuxvideo.com',
+        description:
+            'LG est leader mondial sur le marché des TV OLED. Cela fait plusieurs années que le constructeur coréen affine sa technologie. Prix en hausses, nouvelles dalles, design repensé... voici les grandes évolutions des TV OLED de LG pour 2022. Dans cet article, nous…',
+        url: 'https://www.jeuxvideo.com/news/1545387/tv-oled-ce-qui-va-vraiment-changer-en-2022-pour-lg-prix-performances.htm',
+        urlToImage: 'https://image.jeuxvideo.com/medias-md/164736/1647362123-7908-card.jpg',
+        publishedAt: '2022-03-20T10:10:02Z',
+        content:
+            'LG est leader mondial sur le marché des TV OLED. Cela fait plusieurs années que le constructeur coréen affine sa technologie. Prix en hausses, nouvelles dalles, design repensé... voici les grandes év… [+9866 chars]',
+    },
+    {
+        source: {
+            id: null,
+            name: 'Blitz.bg',
+        },
+        author: 'БЛИЦ',
+        title: 'Шок: Как с една заплата бивш шеф на „Пътна полиция” се сдоби с имоти и луксозни возила - Блиц - Новините от България и света',
+        description:
+            'В момента Дирекция „Вътрешна сигурност“ към МВР проверява Звезделин Колев заради имотното му състояние, а дали шофьорската му книжка е придобита по законен начин',
+        url: 'https://blitz.bg/prestplenie/razsledvane-kak-s-edna-zaplata-bivsh-shef-na-ptna-politsiya-se-sdobi-s-mnogo-imoti-i-luksozni-vozila_news875185.html',
+        urlToImage: 'https://static.blitz.bg/documents/thumbnails/730/202203/1647767347-gfkh.jpg',
+        publishedAt: '2022-03-20T10:06:27Z',
+        content:
+            '. , – , . \r\n . . „ “ .\r\n . „ “ , .\r\n, , 2008 ., , .. 9 „ “ .\r\n. . - 2010 . ? \r\n„ , . , , , . „ ” , .\r\n. , ”. , „ “ .\r\n,   ,  2010 . , - . . , , .\r\n„ . , . . , , … , ”, - .\r\n „“, - , , . . \r\n„ , . . ,… [+400 chars]',
+    },
+]

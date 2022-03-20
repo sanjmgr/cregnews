@@ -1,10 +1,9 @@
 <script setup>
 import Landing from './components/Landing.vue'
-import Flex from './components/Flex.vue'
 </script>
 
 <template>
-    <Flex />
+    <Landing />
 </template>
 
 <style>
