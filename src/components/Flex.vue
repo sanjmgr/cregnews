@@ -3,8 +3,8 @@
         <div class="flex flex-col md:flex-row md:gap-16">
             <div class="divide-y rounded-md md:basis-1/2 lg:basis-2/5">
                 <!-- Hash Tags-->
-                <div class="flex items-center justify-between">
-                    <ul class="flex list-none justify-between gap-8 py-4">
+                <div class="flex items-center justify-between space-x-2">
+                    <ul class="flex list-none space-x-4 py-4">
                         <li class="font-bold">#Trend</li>
                         <li class="font-bold text-[#848584]">#Weather</li>
                         <li class="font-bold">#Entertain</li>
@@ -63,16 +63,17 @@
                         </section>
                     </article>
 
-                    <ul class="flex list-disc gap-8 text-secondary">
-                        <li class="list-none">Readmore</li>
-                        <li>4 min read</li>
-                    </ul>
+                    <div class="flex items-center gap-2 text-secondary">
+                        <span>Readmore</span>
+                        <span class="h-1 w-1 rounded-full bg-secondary"></span>
+                        <span>4 min read</span>
+                    </div>
                 </div>
             </div>
             <div class="md:basis-1/2 md:divide-y lg:basis-3/5">
                 <!-- Hash Tags -->
                 <div class="hidden items-center justify-between md:flex">
-                    <ul class="flex list-none justify-between gap-8 py-4">
+                    <ul class="flex list-none space-x-4 py-4">
                         <li class="font-bold">#Health</li>
                         <li class="font-bold text-[#848584]">#Politic</li>
                         <li class="font-bold">#Sports</li>
@@ -112,10 +113,11 @@
                                     Russia space chief angry over US scrubbing of Gagarin
                                 </h2>
                             </article>
-                            <ul class="flex list-disc gap-8 text-secondary">
-                                <li class="list-none">Readmore</li>
-                                <li>12 min read</li>
-                            </ul>
+                            <div class="flex items-center gap-2 text-secondary">
+                                <span>Readmore</span>
+                                <span class="h-1 w-1 rounded-full bg-secondary"></span>
+                                <span>12 min read</span>
+                            </div>
                         </div>
 
                         <!-- Secondary Card -->
@@ -146,10 +148,11 @@
                                     alt=""
                                 />
                             </article>
-                            <ul class="flex list-disc gap-8 text-secondary">
-                                <li class="list-none">Readmore</li>
-                                <li>12 min read</li>
-                            </ul>
+                            <div class="flex items-center gap-2 text-secondary">
+                                <span>Readmore</span>
+                                <span class="h-1 w-1 rounded-full bg-secondary"></span>
+                                <span>15 min read</span>
+                            </div>
                         </div>
                     </div>
                     <div class="rounded-md lg:block lg:basis-1/2">
@@ -180,10 +183,11 @@
                                     alt=""
                                 />
                             </article>
-                            <ul class="flex list-disc gap-8 text-secondary">
-                                <li class="list-none">Readmore</li>
-                                <li>12 min read</li>
-                            </ul>
+                            <div class="flex items-center gap-2 text-secondary">
+                                <span>Readmore</span>
+                                <span class="h-1 w-1 rounded-full bg-secondary"></span>
+                                <span>7 min read</span>
+                            </div>
                         </div>
 
                         <!-- Tertiary Card -->
@@ -209,10 +213,11 @@
                                     Papua
                                 </h2>
                             </article>
-                            <ul class="flex list-disc gap-8 text-secondary">
-                                <li class="list-none">Readmore</li>
-                                <li>15 min read</li>
-                            </ul>
+                            <div class="flex items-center gap-2 text-secondary">
+                                <span>Readmore</span>
+                                <span class="h-1 w-1 rounded-full bg-secondary"></span>
+                                <span>10 min read</span>
+                            </div>
                         </div>
                     </div>
                 </div>
