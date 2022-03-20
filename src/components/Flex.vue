@@ -1,33 +1,28 @@
 <template>
     <div class="container mx-auto px-8 py-8">
         <div class="flex flex-col md:flex-row md:gap-16">
-            <div class="rounded-md md:basis-1/2 lg:basis-2/5">
-                <!-- Hash Tag with Border -->
-                <div>
-                    <div class="flex items-center justify-between">
-                        <ul class="flex list-none justify-between gap-8 py-4">
-                            <li class="font-bold">#Popular</li>
-                            <li class="font-bold text-[#848584]">#Weather</li>
-                            <li class="font-bold">#Trend</li>
-                            <!-- <li class="font-bold text-[#848584]">#Entertain</li> -->
-                        </ul>
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="h-5 w-5"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                        >
-                            <path
-                                d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"
-                            />
-                        </svg>
-                    </div>
-
-                    <hr class="w-full border border-[#E6E9ED]" />
+            <div class="divide-y rounded-md md:basis-1/2 lg:basis-2/5">
+                <!-- Hash Tags-->
+                <div class="flex items-center justify-between">
+                    <ul class="flex list-none justify-between gap-8 py-4">
+                        <li class="font-bold">#Trend</li>
+                        <li class="font-bold text-[#848584]">#Weather</li>
+                        <li class="font-bold">#Entertain</li>
+                    </ul>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                    >
+                        <path
+                            d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"
+                        />
+                    </svg>
                 </div>
 
                 <!-- Primary Card -->
-                <div class="my-4 md:my-8">
+                <div class="py-6">
                     <!-- News Source -->
                     <div class="flex gap-2">
                         <div
@@ -48,7 +43,7 @@
                             Britain starts to open up. Ramadan begins. It feels like perfect timing
                         </h2>
                         <img
-                            class="my-4 w-full rounded-2xl md:h-52 lg:h-80"
+                            class="aspect-image my-4 h-auto rounded-2xl"
                             src="https://cdn.pixabay.com/photo/2020/05/24/23/44/hands-5216585_960_720.jpg"
                             alt=""
                         />
@@ -74,37 +69,29 @@
                     </ul>
                 </div>
             </div>
-            <div class="md:basis-1/2 lg:basis-3/5">
-                <!-- Hash Tag with Border -->
-                <div class="mb-4 hidden md:block">
-                    <div class="flex items-center justify-between">
-                        <ul class="flex list-none justify-between gap-8 py-4">
-                            <li class="font-bold">#Health</li>
-                            <li class="font-bold text-[#848584]">#Politic</li>
-                            <li class="font-bold">#Sports</li>
-                            <!-- <li class="font-bold text-[#848584]">#Science</li> -->
-                            <!-- <li class="font-bold text-[#848584]">#Tech</li>
-                            <li class="font-bold text-[#848584]">#Business</li>
-                            <li class="font-bold text-[#848584]">#Weather</li> -->
-                        </ul>
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="h-5 w-5"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                        >
-                            <path
-                                d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"
-                            />
-                        </svg>
-                    </div>
-
-                    <hr class="border-1 w-full border-[#E6E9ED]" />
+            <div class="md:basis-1/2 md:divide-y lg:basis-3/5">
+                <!-- Hash Tags -->
+                <div class="hidden items-center justify-between md:flex">
+                    <ul class="flex list-none justify-between gap-8 py-4">
+                        <li class="font-bold">#Health</li>
+                        <li class="font-bold text-[#848584]">#Politic</li>
+                        <li class="font-bold">#Sports</li>
+                    </ul>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                    >
+                        <path
+                            d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"
+                        />
+                    </svg>
                 </div>
-                <div class="flex gap-16">
-                    <div class="grid grow place-content-center rounded-md lg:basis-1/2">
+                <div class="flex flex-col md:gap-1 lg:flex-row lg:gap-16">
+                    <div class="rounded-md lg:basis-1/2">
                         <!-- Tertiary Card -->
-                        <div class="my-4">
+                        <div class="py-6">
                             <!-- News Source -->
                             <div class="flex gap-2">
                                 <div
@@ -132,7 +119,7 @@
                         </div>
 
                         <!-- Secondary Card -->
-                        <div class="my-4">
+                        <div class="py-6">
                             <!-- News Source -->
                             <div class="flex gap-2">
                                 <div
@@ -154,7 +141,7 @@
                                     scientist says
                                 </h2>
                                 <img
-                                    class="my-4 w-full rounded-2xl md:h-52 lg:h-64"
+                                    class="aspect-image my-4 h-auto rounded-2xl"
                                     src="https://cdn.pixabay.com/photo/2019/03/18/04/53/bird-4062359_960_720.jpg"
                                     alt=""
                                 />
@@ -165,9 +152,9 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="hidden rounded-md lg:block lg:basis-1/2">
+                    <div class="rounded-md lg:block lg:basis-1/2">
                         <!-- Secondary Card -->
-                        <div class="my-4">
+                        <div class="py-6">
                             <!-- News Source -->
                             <div class="flex gap-2">
                                 <div
@@ -188,7 +175,7 @@
                                     27 new COVID cases in Singapore, including 1 in community
                                 </h2>
                                 <img
-                                    class="my-4 w-full rounded-2xl md:h-52 lg:h-64"
+                                    class="aspect-image my-4 h-auto rounded-2xl"
                                     src="https://cdn.pixabay.com/photo/2020/01/23/16/42/embrace-4788167_960_720.jpg"
                                     alt=""
                                 />
@@ -200,7 +187,7 @@
                         </div>
 
                         <!-- Tertiary Card -->
-                        <div class="mb-4 mt-8">
+                        <div class="py-6">
                             <!-- News Source -->
                             <div class="flex gap-2">
                                 <div

@@ -21,3 +21,9 @@
             url('/fonts/Formular.woff') format('woff');
     }
 }
+
+@layer utilities {
+    .aspect-image {
+        aspect-ratio: 3/2;
+    }
+}
