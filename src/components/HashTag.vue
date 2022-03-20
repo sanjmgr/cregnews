@@ -8,8 +8,6 @@
             >
                 #{{ tag.name }}
             </li>
-            <!-- <li class="font-bold text-[#848584]">#Weather</li>
-            <li class="font-bold">#Entertain</li> -->
         </ul>
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -27,9 +25,7 @@
 <script>
 export default {
     props: ['tags'],
-    setup(props) {
-        console.log(props.tags)
-    },
+    setup(props) {},
 }
 </script>
 

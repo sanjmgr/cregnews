@@ -3,18 +3,25 @@
         <div class="flex flex-col md:flex-row md:gap-16">
             <div class="divide-y rounded-md md:basis-1/2 lg:basis-2/5">
                 <HashTag :tags="primaryTags" />
-                <PrimaryCard :article="primary[0]" />
+                <div v-if="headlines.length">
+                    <NewsCard
+                        v-for="(article, index) in headlines"
+                        :key="article"
+                        :article="article"
+                        :type="shuffle[index]"
+                    />
+                </div>
             </div>
             <div class="md:basis-1/2 md:divide-y lg:basis-3/5">
                 <HashTag class="hidden md:flex" :tags="secondaryTags" />
                 <div class="flex flex-col md:gap-1 lg:flex-row lg:gap-16">
                     <div class="rounded-md lg:basis-1/2">
-                        <TertiaryCard :article="tertiary[1]" />
-                        <SecondaryCard :article="secondary[0]" />
+                        <NewsCard :article="tertiary[0]" type="tertiary" />
+                        <NewsCard :article="secondary[0]" type="secondary" />
                     </div>
                     <div class="rounded-md lg:block lg:basis-1/2">
-                        <SecondaryCard :article="secondary[1]" />
-                        <TertiaryCard :article="tertiary[1]" />
+                        <NewsCard :article="secondary[1]" type="secondary" />
+                        <NewsCard :article="tertiary[1]" type="tertiary" />
                     </div>
                 </div>
             </div>
@@ -23,18 +30,16 @@
 </template>
 
 <script>
-import PrimaryCard from './cards/PrimaryCard.vue'
-import SecondaryCard from './cards/SecondaryCard.vue'
-import TertiaryCard from './cards/TertiaryCard.vue'
+import { onMounted, ref } from '@vue/runtime-core'
 import HashTag from './HashTag.vue'
 import { articles } from '../assets/articles'
+import { GET } from '../worker/Http'
+import NewsCard from './NewsCard.vue'
+import { chunkIntoN } from '../utility'
 
 export default {
     setup() {
-        const chunkIntoN = (arr, n) => {
-            const size = Math.ceil(arr.length / n)
-            return Array.from({ length: n }, (_, i) => arr.slice(i * size, i * size + size))
-        }
+        const shuffle = ['primary', 'secondary', 'tertiary', 'primary', 'tertiary', 'secondary']
 
         const { 0: primary, 1: secondary, 2: tertiary } = chunkIntoN(articles, 3)
 
@@ -76,9 +81,32 @@ export default {
             },
         ]
 
-        return { primary, secondary, tertiary, primaryTags, secondaryTags }
+        const headlines = ref([])
+
+        const headline = async () => {
+            const [data, error] = await GET(`top-headlines?category=technology&pageSize=10`)
+
+            if (data) {
+                const articles = data.articles
+                    .filter(
+                        article =>
+                            article.urlToImage &&
+                            article.title &&
+                            article.description &&
+                            article.content
+                    )
+                    .slice(0, 6)
+                headlines.value = articles
+            }
+
+            return new Error(error)
+        }
+
+        onMounted(() => headline())
+
+        return { primary, secondary, tertiary, primaryTags, secondaryTags, headlines, shuffle }
     },
-    components: { PrimaryCard, SecondaryCard, TertiaryCard, HashTag },
+    components: { HashTag, NewsCard },
 }
 </script>
 
