@@ -1,6 +1,6 @@
 <template>
-    <div class="container mx-auto px-8 py-8">
-        <div class="flex flex-col md:flex-row md:gap-16">
+    <div class="container mx-auto px-8 py-8 md:px-4">
+        <div class="flex flex-col justify-between gap-16 md:flex-row">
             <div class="divide-y rounded-md md:basis-1/2 lg:basis-2/5">
                 <HashTag :tags="primaryTags" />
                 <div v-if="headlines.length">
@@ -30,10 +30,8 @@
 </template>
 
 <script>
-import { onMounted, ref } from '@vue/runtime-core'
 import HashTag from './HashTag.vue'
 import { articles, headlines } from '../assets/articles'
-import { GET } from '../worker/Http'
 import NewsCard from './NewsCard.vue'
 import { chunkIntoN } from '../utility'
 
