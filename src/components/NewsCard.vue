@@ -5,16 +5,16 @@
         <article class="mt-4 mb-3">
             <img
                 v-if="type === 'tertiary'"
-                class="aspect-image my-4 h-auto rounded-2xl md:hidden"
+                class="aspect-image my-4 h-auto rounded-2xl object-cover md:hidden"
                 :src="urlToImage"
                 :alt="title"
             />
-            <h2 class="object-cover text-2xl font-bold">
+            <h2 class="text-2xl font-bold">
                 {{ title }}
             </h2>
             <img
                 v-if="type !== 'tertiary'"
-                class="aspect-image my-4 h-auto rounded-2xl"
+                class="aspect-image my-4 h-auto rounded-2xl object-cover"
                 :src="urlToImage"
                 :alt="title"
             />
@@ -54,5 +54,3 @@ export default {
     components: { Source, Readmore },
 }
 </script>
-
-<style></style>

@@ -1,27 +1,35 @@
 <template>
     <div class="container mx-auto px-8 py-8 md:px-4">
-        <div class="flex flex-col justify-between gap-16 md:flex-row">
+        <div class="flex flex-col justify-between md:flex-row md:gap-16">
             <div class="divide-y rounded-md md:basis-1/2 lg:basis-2/5">
-                <HashTag :tags="primaryTags" />
-                <div v-if="headlines.length">
+                <HashTag :tags="tags_1" />
+                <div v-if="primary.length">
                     <NewsCard
-                        v-for="(article, index) in headlines"
+                        v-for="(article, index) in primary"
                         :key="article"
                         :article="article"
-                        :type="shuffle[index]"
+                        :type="shuffle_1[index]"
                     />
                 </div>
             </div>
             <div class="md:basis-1/2 md:divide-y lg:basis-3/5">
-                <HashTag class="hidden md:flex" :tags="secondaryTags" />
+                <HashTag class="hidden md:flex" :tags="tags_2" />
                 <div class="flex flex-col md:gap-1 lg:flex-row lg:gap-16">
                     <div class="rounded-md lg:basis-1/2">
-                        <NewsCard :article="tertiary[0]" type="tertiary" />
-                        <NewsCard :article="secondary[0]" type="secondary" />
+                        <NewsCard
+                            v-for="(article, index) in secondary"
+                            :key="article"
+                            :article="article"
+                            :type="shuffle_2[index]"
+                        />
                     </div>
                     <div class="rounded-md lg:block lg:basis-1/2">
-                        <NewsCard :article="secondary[1]" type="secondary" />
-                        <NewsCard :article="tertiary[1]" type="tertiary" />
+                        <NewsCard
+                            v-for="(article, index) in tertiary"
+                            :key="article"
+                            :article="article"
+                            :type="shuffle_3[index]"
+                        />
                     </div>
                 </div>
             </div>
@@ -31,67 +39,25 @@
 
 <script>
 import HashTag from './HashTag.vue'
-import { articles, headlines } from '../assets/articles'
+import { articles } from '../assets/articles'
 import NewsCard from './NewsCard.vue'
-import { chunkIntoN } from '../utility'
+import { chunkIntoN, shuffle_1, shuffle_2, shuffle_3, tags_1, tags_2 } from '../utility'
 
 export default {
     setup() {
-        const shuffle = ['primary', 'secondary', 'tertiary', 'primary', 'tertiary', 'secondary']
-
         const { 0: primary, 1: secondary, 2: tertiary } = chunkIntoN(articles, 3)
-
-        const primaryTags = [
-            {
-                name: 'Popular',
-                isPrimary: true,
-            },
-            {
-                name: 'Hot',
-                isPrimary: false,
-            },
-            {
-                name: 'Trend',
-                isPrimary: true,
-            },
-            {
-                name: 'Entertain',
-                isPrimary: false,
-            },
-        ]
-
-        const secondaryTags = [
-            {
-                name: 'Health',
-                isPrimary: true,
-            },
-            {
-                name: 'Politic',
-                isPrimary: true,
-            },
-            {
-                name: 'Sports',
-                isPrimary: false,
-            },
-            {
-                name: 'Science',
-                isPrimary: true,
-            },
-        ]
 
         return {
             primary,
             secondary,
             tertiary,
-            primaryTags,
-            secondaryTags,
-            headlines,
-            shuffle,
-            headlines,
+            shuffle_1,
+            shuffle_2,
+            shuffle_3,
+            tags_1,
+            tags_2,
         }
     },
     components: { HashTag, NewsCard },
 }
 </script>
-
-<style></style>
