@@ -1,5 +1,6 @@
 <template>
     <div class="container mx-auto px-8 py-8 md:px-4">
+        <CommandPalette :articles="primary" />
         <div class="flex flex-col justify-between md:flex-row md:gap-16">
             <div class="divide-y rounded-md md:basis-1/2 lg:basis-2/5">
                 <HashTag :tags="tags_1" />
@@ -41,6 +42,8 @@
 import HashTag from './HashTag.vue'
 import { articles } from '../assets/articles'
 import NewsCard from './NewsCard.vue'
+import CommandPalette from './CommandPalette.vue'
+
 import { chunkIntoN, shuffle_1, shuffle_2, shuffle_3, tags_1, tags_2 } from '../utility'
 
 export default {
@@ -58,6 +61,6 @@ export default {
             tags_2,
         }
     },
-    components: { HashTag, NewsCard },
+    components: { HashTag, NewsCard, CommandPalette },
 }
 </script>
