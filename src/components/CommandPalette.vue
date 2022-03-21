@@ -124,7 +124,6 @@ export default {
             handleChange,
             query,
             filteredArticles,
-            clearQuery,
         }
     },
 }
