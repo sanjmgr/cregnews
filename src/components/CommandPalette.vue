@@ -1,4 +1,22 @@
 <template>
+    <button
+        @click="handleIsOpen"
+        class="w-72 cursor-pointer rounded-lg bg-white shadow-md ring-1 ring-black/5 hover:ring-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500"
+    >
+        <div class="flex h-12 items-center justify-between px-4">
+            <div class="flex gap-3">
+                <SearchIcon class="h-6 w-6 text-gray-500" />
+                <span class="text-gray-400"> Quick search... </span>
+            </div>
+            <kbd class="inline-flex font-poppins font-semibold dark:text-slate-500">
+                <abbr title="Control" class="pr-1 text-slate-300 no-underline dark:text-slate-500">
+                    Ctrl
+                </abbr>
+                <abbr class="text-slate-500">K</abbr>
+            </kbd>
+        </div>
+    </button>
+
     <TransitionRoot :show="isOpen" as="template">
         <Dialog @close="setIsOpen" class="fixed inset-0 overflow-y-auto p-4 pt-[25vh] font-poppins">
             <TransitionChild
@@ -20,12 +38,12 @@
                 leave-to="opacity-0 scale-95"
             >
                 <Combobox
-                    @change="handleChange"
+                    @change="handleIsOpen"
                     as="div"
                     class="relative mx-auto max-w-xl divide-y divide-gray-100 overflow-hidden rounded-xl bg-white shadow-2xl ring-1 ring-black/5"
                 >
                     <div class="flex items-center px-4">
-                        <SearchIcon class="h-5 w-6 text-gray-500" />
+                        <SearchIcon class="h-6 w-6 text-gray-500" />
                         <ComboboxInput
                             @change="query = $event.target.value"
                             class="h-12 w-full border-0 bg-transparent text-gray-800 placeholder-gray-400 focus:ring-0"
@@ -73,26 +91,15 @@ import {
     TransitionRoot,
     TransitionChild,
 } from '@headlessui/vue'
-import { computed, onMounted, onUnmounted } from '@vue/runtime-core'
+import { computed, onMounted } from '@vue/runtime-core'
 export default {
     props: ['articles'],
-    components: {
-        Dialog,
-        DialogOverlay,
-        Combobox,
-        ComboboxInput,
-        SearchIcon,
-        ComboboxOptions,
-        ComboboxOption,
-        TransitionRoot,
-        TransitionChild,
-    },
     setup(props) {
         const isOpen = ref(false)
         const query = ref('')
 
         const setIsOpen = value => (isOpen.value = value)
-        const handleChange = evt => {
+        const handleIsOpen = evt => {
             setIsOpen(!isOpen.value)
         }
 
@@ -121,10 +128,21 @@ export default {
         return {
             isOpen,
             setIsOpen,
-            handleChange,
+            handleIsOpen,
             query,
             filteredArticles,
         }
+    },
+    components: {
+        Dialog,
+        DialogOverlay,
+        Combobox,
+        ComboboxInput,
+        SearchIcon,
+        ComboboxOptions,
+        ComboboxOption,
+        TransitionRoot,
+        TransitionChild,
     },
 }
 </script>
