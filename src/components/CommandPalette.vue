@@ -1,4 +1,5 @@
 <template>
+    <!-- Todo: Small screen, hide other than search icon -->
     <button
         @click="handleIsOpen"
         class="w-72 cursor-pointer rounded-lg bg-white shadow-md ring-1 ring-black/5 hover:ring-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500"

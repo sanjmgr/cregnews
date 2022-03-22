@@ -44,7 +44,6 @@
 import HashTag from './HashTag.vue'
 import { articles } from '../assets/articles'
 import NewsCard from './NewsCard.vue'
-import Header from './Header.vue'
 import CommandPalette from './CommandPalette.vue'
 
 import { chunkIntoN, shuffle_1, shuffle_2, shuffle_3, tags_1, tags_2 } from '../utility'
