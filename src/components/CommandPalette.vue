@@ -1,16 +1,17 @@
 <template>
-    <!-- Todo: Small screen, hide other than search icon -->
     <button
         @click="handleIsOpen"
-        class="w-72 cursor-pointer rounded-lg bg-white shadow-md ring-1 ring-black/5 hover:ring-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500"
+        class="cursor-pointer bg-white hover:ring-slate-300 md:w-72 md:rounded-lg md:shadow-md md:ring-1 md:ring-black/5 md:focus:outline-none md:focus:ring-2 md:focus:ring-sky-500"
     >
         <div class="flex h-12 items-center justify-between px-4">
             <div class="flex gap-3">
                 <SearchIcon class="h-6 w-6 text-gray-500" />
-                <span class="text-gray-400"> Quick search... </span>
+                <span class="hidden text-gray-400 md:block"> Quick search... </span>
             </div>
-            <kbd class="inline-flex font-poppins font-semibold dark:text-slate-500">
-                <abbr title="Control" class="pr-1 text-slate-300 no-underline dark:text-slate-500">
+            <kbd
+                class="hidden whitespace-nowrap font-poppins font-semibold dark:text-slate-500 md:inline-block"
+            >
+                <abbr title="Control" class="text-slate-300 no-underline dark:text-slate-500">
                     Ctrl
                 </abbr>
                 <abbr class="text-slate-500">K</abbr>
@@ -60,10 +61,11 @@
                                 :value="article"
                             >
                                 <li
-                                    :class="{
-                                        'bg-indigo-600 px-4 py-2 text-white': active,
-                                        'bg-white px-4 py-2 text-gray-900': !active,
-                                    }"
+                                    :class="[
+                                        active
+                                            ? 'bg-indigo-600 px-4 py-2 text-white'
+                                            : 'bg-white px-4 py-2 text-gray-900',
+                                    ]"
                                 >
                                     {{ article.title }}
                                 </li>

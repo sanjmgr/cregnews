@@ -2,23 +2,19 @@
     <div class="py-6">
         <Source :name="name" />
         <!-- main section -->
-        <article class="mt-4 mb-3">
-            <img
-                v-if="type === 'tertiary'"
-                class="aspect-image my-4 h-auto rounded-2xl object-cover md:hidden"
-                :src="urlToImage"
-                :alt="title"
-            />
+        <article class="mt-4 mb-3 flex flex-col">
             <h2 class="text-2xl font-bold">
                 {{ title }}
             </h2>
-            <img
-                v-if="type !== 'tertiary'"
-                class="aspect-image my-4 h-auto rounded-2xl object-cover"
-                :src="urlToImage"
-                :alt="title"
-            />
-            <p v-if="type === 'primary'">
+            <div
+                :class="[
+                    'aspect-w-3 aspect-h-2 my-4',
+                    type === 'tertiary' ? 'order-first md:hidden' : 'order-1',
+                ]"
+            >
+                <img class="aspect-image rounded-2xl object-cover" :src="urlToImage" :alt="title" />
+            </div>
+            <p v-if="type === 'primary'" class="order-last">
                 {{ content }}
             </p>
         </article>
