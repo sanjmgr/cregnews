@@ -10,6 +10,7 @@
                     <NewsCard
                         v-for="(article, index) in primary"
                         :key="article"
+                        :index="index"
                         :article="article"
                         :type="shuffle_1[index]"
                     />
@@ -22,6 +23,7 @@
                         <NewsCard
                             v-for="(article, index) in secondary"
                             :key="article"
+                            :index="index"
                             :article="article"
                             :type="shuffle_2[index]"
                         />
@@ -30,6 +32,7 @@
                         <NewsCard
                             v-for="(article, index) in tertiary"
                             :key="article"
+                            :index="index"
                             :article="article"
                             :type="shuffle_3[index]"
                         />

@@ -12,7 +12,12 @@
                     type === 'tertiary' ? 'order-first md:hidden' : 'order-1',
                 ]"
             >
-                <img class="aspect-image rounded-2xl object-cover" :src="urlToImage" :alt="title" />
+                <img
+                    :loading="index <= 1 ? 'eager' : 'lazy'"
+                    class="rounded-2xl object-cover"
+                    :src="urlToImage"
+                    :alt="title"
+                />
             </div>
             <p v-if="type === 'primary'" class="order-last">
                 {{ content }}
@@ -30,7 +35,7 @@ import { computed } from '@vue/runtime-core'
 import { readTime, dateFormat } from '../utility'
 
 export default {
-    props: ['article', 'type'],
+    props: ['article', 'type', 'index'],
     setup(props) {
         let {
             title,
